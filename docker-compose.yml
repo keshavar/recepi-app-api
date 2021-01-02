@@ -1,0 +1,19 @@
+# version of docker compose file
+version: "3"
+
+# Need only one service. i.e Pyghon Django application
+# context: . means current directory
+# port 8000 on host to port 8000 on the image. This port should match the port given on runserver command
+# command: > - In this > means this line continues in next line
+# sh -c "python manage.py runserver 0.0.0.0:8000" - 0.0.0.0 Django dev server runs on all ip addresses available on Docker container
+
+services:
+  app:
+    build:
+      context: .
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./app:/app
+    command: > # > means this line continues in next line
+      sh -c "python manage.py runserver 0.0.0.0:8000"
