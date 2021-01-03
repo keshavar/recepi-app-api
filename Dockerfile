@@ -1,5 +1,5 @@
 # Inherit from Image & overwrite some of the parameters below
-FROM python:3.9-alpine
+FROM python:3.7-alpine
 MAINTAINER Keshav
 
 # No bufferring of output
