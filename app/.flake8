@@ -1,0 +1,7 @@
+[flake8]
+# Exclude some of the scripts & tools created by Django
+exclude =
+  migrations,
+  __pycache__,
+  manage.py,
+  settings.py

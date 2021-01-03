@@ -1,3 +1,5 @@
 #Django latest subversion to be installed in the given version
 Django>=3.1.4,<3.2.0
 djangorestframework>=3.12.2,<3.13.0
+
+flake8>=3.6.0,<3.7.0

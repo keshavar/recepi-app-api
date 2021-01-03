@@ -1,0 +1,23 @@
+# Everytime any change is pushed to the project
+# 1) spin up a python server with version 3.6
+# 2) make docker service available
+# 3) install docker-compose
+# 4) run the service "app" and execute commands
+
+The language Travis is written with & the version
+language: python
+python:
+  - "3.6"
+
+# The services going to be used
+services:
+  - docker
+
+# Script to be run before the automation command runs
+before_script: pip install docker-compose
+
+# Script to be run for every change in the project
+# Run/Use the service "app" inside the docker-compose file and
+# execute commands "test" & "flake8"
+script:
+  - docker-compose run --rm app sh -c "python manage.py test && flake8"
