@@ -3,7 +3,6 @@
 # 2) make docker service available
 # 3) install docker-compose
 # 4) run the service "app" and execute commands
-
 The language Travis is written with & the version
 language: python
 python:
@@ -20,4 +19,4 @@ before_script: pip install docker-compose
 # Run/Use the service "app" inside the docker-compose file and
 # execute commands "test" & "flake8"
 script:
-  - docker-compose run --rm app sh -c "python manage.py test && flake8"
+  - docker-compose run run app sh -c "python manage.py test && flake8"
